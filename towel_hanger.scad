@@ -1,4 +1,4 @@
-$fn = 30;
+$fn = 50;
 
 pin_length = 50;
 pin_spacing = 10;
@@ -66,6 +66,7 @@ module pin() {
     translate([pin_spacing/2, 0, -pin_length]) rotate([90, -90, 0]) union() {
         teeth(tooth_count, tooth_width, tooth_height);
         translate([tooth_width/3,pin_spacing,0]) mirror([0,1,0]) teeth(tooth_count, tooth_width, tooth_height);
-}}
+    }
+}
 
 pin();
